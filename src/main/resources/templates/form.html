@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" xml:lang="en">
+<head>
+<title>Form validation Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <a href="/home" >Home</a>
+	<h1 th:text="${message}" text-align:"center"></h1>
+	<div class="container" text-align:"center">
+		<h2>Creating New Employee</h2>
+		<form action="/" th:action="@{/ADD}" th:object="${emp}" method="post" >
+			<div class="form-group">
+				<label for="forename">forename:</label> <input type="text"
+					class="form-control" id="forename" placeholder="Enter Forename"
+					name="forename" th:field="*{forename}"> <br />
+				<p th:if="${#fields.hasErrors('forename')}" th:errors="*{forename}"
+					class="alert alert-danger"></p>
+			</div><br>
+			<div class="form-group">
+				<label for="surname">surname:</label> <input type="text"
+					class="form-control" id="surname" placeholder="Enter surname"
+					name="surname" th:field="*{surname}"> <br />
+				<p th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}"
+					class="alert alert-danger"></p>
+			</div><br>
+			<div class="form-group">
+				<label for="age">age:</label> <input type="number"
+					class="form-control" id="age" placeholder="Enter age"
+					name="age" th:field="*{age}"> <br />
+				<p th:if="${#fields.hasErrors('age')}" th:errors="*{age}"
+					class="alert alert-danger"></p>		
+			</div><br>
+			<div class="form-group">
+				<label for="company">company:</label> <input type="text"
+					class="form-control" id="surname" placeholder="Enter company"
+					name="company" th:field="*{company}"> <br />
+				<p th:if="${#fields.hasErrors('company')}" th:errors="*{company}"
+					class="alert alert-danger"></p>
+			</div><br>
+					<div class="form-group">
+				<label for="postcode">postcode:</label> <input type="text"
+					class="form-control" id="postcode" placeholder="Enter postcode"
+					name="postcode" th:field="*{postcode}"> <br />
+				<p th:if="${#fields.hasErrors('postcode')}" th:errors="*{postcode}"
+					class="alert alert-danger"></p>
+			</div><br>
+			
+			
+			
+			
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+
+</body>
+</html>
