@@ -12,16 +12,12 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.week3challenges.week3challenge.empentity.Employee;
 import com.week3challenges.week3challenge.emprepository.EmployeeRepository;
 import com.week3challenges.week3challenge.empservice.EmpService1;
 
 
-
-@RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 class EmpService1Test {
 
