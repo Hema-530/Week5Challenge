@@ -20,7 +20,7 @@ import com.week3challenges.week3challenge.empservice.EmpService1;
 
 
 
-@RunWith(SpringRunner.class)
+@RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 class EmpService1Test {
 
