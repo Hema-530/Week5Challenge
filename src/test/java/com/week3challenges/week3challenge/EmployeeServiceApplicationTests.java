@@ -1,6 +1,7 @@
 package com.week3challenges.week3challenge;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 
