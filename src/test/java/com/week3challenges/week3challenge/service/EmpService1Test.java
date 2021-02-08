@@ -6,29 +6,31 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import com.week3challenges.week3challenge.empentity.Employee;
 import com.week3challenges.week3challenge.emprepository.EmployeeRepository;
 import com.week3challenges.week3challenge.empservice.EmpService1;
 
-
+@RunWith(SpringRunner.class)
 @SpringBootTest
-class EmpService1Test {
+public class EmpService1Test {
 
 	@Autowired
-    private EmpService1 empService;
+    EmpService1 empService;
      
     @MockBean
-    private EmployeeRepository repository;
+    EmployeeRepository repository;
     
 	@Test
-    void getAllEmployeesTest(){
+    public void getAllEmployeesTest(){
         List<Employee> list = new ArrayList<Employee>();
         Employee employee1= new Employee(1, "Lokesh","Gupta",26,"TCS",123423);
 		Employee employee2=new Employee(2,"Hema","Mothukuri",22,"TCS",522601);
@@ -64,7 +66,7 @@ class EmpService1Test {
 	 }
 	 */
 	 @Test
-	  void getEmployeeByIdTest() {
+	  public void getEmployeeByIdTest() {
 		 
 		 Employee emp=new Employee();
 		 emp.setId(2);
