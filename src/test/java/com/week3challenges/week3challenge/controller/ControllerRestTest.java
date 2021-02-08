@@ -11,7 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -19,6 +20,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletResponse;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.RequestBuilder;
@@ -31,21 +33,21 @@ import com.week3challenges.week3challenge.empentity.Employee;
 import com.week3challenges.week3challenge.emprepository.EmployeeRepository;
 import com.week3challenges.week3challenge.empservice.EmpService1;
 
-
+@RunWith(SpringRunner.class)
 @WebMvcTest(ControllerRest.class)
-class ControllerRestTest  {
+public class ControllerRestTest  {
 	
 	@Autowired
-	private MockMvc mockMvc;
+	MockMvc mockMvc;
 	
 	@MockBean
-	private EmpService1 service;
+	EmpService1 service;
 	
 	@MockBean
-	private EmployeeRepository repository;
+	EmployeeRepository repository;
 	
 	@Test
-	 void testEmployeeList() throws Exception {
+	 public void testEmployeeList() throws Exception {
 		List<Employee> list=new ArrayList<>();
 		
 		list.add(new Employee(1,"Lokesh","Gupta",26,"TCS",123423));
@@ -75,7 +77,7 @@ class ControllerRestTest  {
 	}
 	
 	@Test
-	 void testUpdateEmployee() throws Exception {
+	public void testUpdateEmployee() throws Exception {
 		Employee e=new Employee();
 		int id=2;
    	 	e.setId(2);
