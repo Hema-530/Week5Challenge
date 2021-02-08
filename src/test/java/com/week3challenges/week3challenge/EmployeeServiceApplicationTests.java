@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 
-class Week3challengeApplicationTests {
+public class Week3challengeApplicationTests {
 
 	@Test
 	public void contextLoads() {
