@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class Week3challengeApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }
