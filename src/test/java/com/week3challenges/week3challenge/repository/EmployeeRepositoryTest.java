@@ -6,12 +6,10 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import com.week3challenges.week3challenge.empentity.Employee;
 import com.week3challenges.week3challenge.emprepository.EmployeeRepository;
 
-@RunWith(SpringRunner.class)
 @DataJpaTest
 class EmployeeRepositoryTest {
 	 @Autowired
